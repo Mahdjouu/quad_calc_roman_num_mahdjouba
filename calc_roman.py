@@ -16,7 +16,7 @@ def un_symbole_to_valeur(romain):
     else:
         return "error"
 
-def deux_symboles_to_valeur(romains):
+def deux_symboles_identiques_to_valeur(romains):
     if romains=="II" or romains=="ii":
         return 2
     elif romains=="VV" or romains=="vv":
@@ -33,3 +33,6 @@ def deux_symboles_to_valeur(romains):
         return 2000
     else:
         return "error"
+
+def n_symboles_identiques_to_valeur(romains):
+    return "yay!"
