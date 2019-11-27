@@ -43,3 +43,14 @@ def test_chaine_d_identiques():
     assert c.chaine_d_identiques("cccccccccc") == True
     assert c.chaine_d_identiques("ZZZZZZZZZZZZZZ") == True
     assert c.chaine_d_identiques("azertyuiop") == False
+
+def test_n_symboles_to_valeur():
+    assert c.symboles_to_valeur("XIX")==19
+    assert c.symboles_to_valeur("XX")==20
+    assert c.symboles_to_valeur("CCCCC")==500
+    assert c.symboles_to_valeur("XIV")==14
+    assert c.symboles_to_valeur("ABSR")=="error"
+    assert c.symboles_to_valeur("WWWWWW")=="error"
+    assert c.symboles_to_valeur("III")==3
+    assert c.symboles_to_valeur("D")==500
+    assert c.symboles_to_valeur("Ll")==100

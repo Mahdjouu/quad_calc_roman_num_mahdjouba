@@ -61,3 +61,5 @@ def n_symboles_identiques_to_valeur(romains):
     else:
         return "error"
 
+def symboles_to_valeur(romains):
+    return "coucou"
