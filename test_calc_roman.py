@@ -1,5 +1,16 @@
 import calc_roman as c
 
+def test_symboles():
+    assert c.symboles("I")==True
+    assert c.symboles("v")==True
+    assert c.symboles("X")==True
+    assert c.symboles("l")==True
+    assert c.symboles("C")==True
+    assert c.symboles("d")==True
+    assert c.symboles("m")==True
+    assert c.symboles("Z")==False
+    assert c.symboles("a")==False
+    assert c.symboles("y")==False
 
 def test_un_symbole_to_valeur():
     assert c.un_symbole_to_valeur("I") == 1
@@ -35,6 +46,7 @@ def test_n_symboles_identiques_to_valeur():
     assert c.n_symboles_identiques_to_valeur("MMMMMMMMMM") == 10000
     assert c.n_symboles_identiques_to_valeur("XCIV") == "error"
     assert c.n_symboles_identiques_to_valeur("absrt") == "error"
+    assert c.n_symboles_identiques_to_valeur("I") == 1
 
 
 def test_chaine_d_identiques():
@@ -44,13 +56,11 @@ def test_chaine_d_identiques():
     assert c.chaine_d_identiques("ZZZZZZZZZZZZZZ") == True
     assert c.chaine_d_identiques("azertyuiop") == False
 
+
 def test_n_symboles_to_valeur():
-    assert c.symboles_to_valeur("XIX")==19
-    assert c.symboles_to_valeur("XX")==20
-    assert c.symboles_to_valeur("CCCCC")==500
-    assert c.symboles_to_valeur("XIV")==14
-    assert c.symboles_to_valeur("ABSR")=="error"
-    assert c.symboles_to_valeur("WWWWWW")=="error"
-    assert c.symboles_to_valeur("III")==3
-    assert c.symboles_to_valeur("D")==500
-    assert c.symboles_to_valeur("Ll")==100
+    assert c.symboles_to_valeur("XX") == 20
+    assert c.symboles_to_valeur("CCCCC") == 500
+    assert c.symboles_to_valeur("WWWWWW") == "error"
+    assert c.symboles_to_valeur("III") == 3
+    assert c.symboles_to_valeur("D") == 500
+    assert c.symboles_to_valeur("ABSR") == "error"
