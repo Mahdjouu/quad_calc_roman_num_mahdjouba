@@ -36,6 +36,14 @@ def test_deux_symboles_identiques_to_valeur():
     assert c.deux_symboles_identiques_to_valeur("xcvb") == "error"
 
 
+def test_chaine_d_identiques():
+    assert c.chaine_d_identiques("XXXXXXX") == True
+    assert c.chaine_d_identiques("ABCDEF") == False
+    assert c.chaine_d_identiques("cccccccccc") == True
+    assert c.chaine_d_identiques("ZZZZZZZZZZZZZZ") == True
+    assert c.chaine_d_identiques("azertyuiop") == False
+
+
 def test_n_symboles_identiques_to_valeur():
     assert c.n_symboles_identiques_to_valeur("III") == 3
     assert c.n_symboles_identiques_to_valeur("VVVV") == 20
@@ -49,14 +57,6 @@ def test_n_symboles_identiques_to_valeur():
     assert c.n_symboles_identiques_to_valeur("I") == 1
 
 
-def test_chaine_d_identiques():
-    assert c.chaine_d_identiques("XXXXXXX") == True
-    assert c.chaine_d_identiques("ABCDEF") == False
-    assert c.chaine_d_identiques("cccccccccc") == True
-    assert c.chaine_d_identiques("ZZZZZZZZZZZZZZ") == True
-    assert c.chaine_d_identiques("azertyuiop") == False
-
-
 def test_n_symboles_to_valeur():
     assert c.symboles_to_valeur("XX") == 20
     assert c.symboles_to_valeur("CCCCC") == 500
@@ -64,3 +64,6 @@ def test_n_symboles_to_valeur():
     assert c.symboles_to_valeur("III") == 3
     assert c.symboles_to_valeur("D") == 500
     assert c.symboles_to_valeur("ABSR") == "error"
+
+def test_deux_symboles_soustraction_to_valeur():
+    assert c.deux_symboles_soustraction_to_valeur("IV")==4

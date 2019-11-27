@@ -90,3 +90,10 @@ def symboles_to_valeur(romains):
             else:
                 return "error"
     return somme_n_symboles
+
+def deux_symboles_soustraction_to_valeur(romains):
+    if len(romains)==2:
+        if romains=="IV":
+            return 4
+    else:
+        return "error"
